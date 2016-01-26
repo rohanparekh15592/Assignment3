@@ -25,7 +25,7 @@ public class DBsample1 {
         String username = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
         String password = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
         String name= "dbsample1";
-        String url = "jdbc:mysql://" + host + ":" + port + ":" + name ;
+        String url = "jdbc:mysql://" + host + ":" + port + "/" + name ;
         return DriverManager.getConnection(url,username,password);
     }
     public static String getTable(){
