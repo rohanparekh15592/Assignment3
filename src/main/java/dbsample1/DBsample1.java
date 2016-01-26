@@ -33,7 +33,7 @@ public class DBsample1 {
         try {
             Connection con = getConnection();
             Statement stmt= con.createStatement();
-            ResultSet rs= stmt.executeQuery("Slect * from people");
+            ResultSet rs= stmt.executeQuery("Select * from people");
             while(rs.next()){
                 output += "<h2>" +rs.getString("name")+ "</h2>";
                 output += "<h2>" +rs.getString("bio")+ "</h2>";
